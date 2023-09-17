@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>시계</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .clock {
+        font-size: 22px;
+        font-style: bold;
+        color: blue;
+      }
+    </style>
+    <script language="javascript">
+      function showClock() {
+        let currentDate = new Date();
+        let divClock = document.getElementById("divClock");
+        let meridiem = currentDate.getHours() < 12 ? "AM" : "PM";
+        let msg = meridiem + " " + currentDate.getHours() + ": ";
+
+        msg += currentDate.getMinutes() + ": ";
+        msg += currentDate.getSeconds() + "";
+
+        divClock.innerText = msg;
+
+        setTimeout(showClock, 1000);
+      }
+    </script>
+  </head>
+  <body onload="showClock()">
+    <div id="divClock" class="clock"></div>
+  </body>
+</html>
+​

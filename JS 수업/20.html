@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>드롭다운 리스트 </title>
+    <script>
+      var windowVersion = new Array();
+      var officeVersion = new Array();
+
+      windowVersion.push("윈도우 2000");
+      windowVersion.push("윈도우 xp");
+      windowVersion.push("윈도우 비스타");
+
+      officeVersion.push("오피스 XP")
+      officeVersion.push("오피스 2003")
+      officeVersion.push("오피스 2007")
+
+      function setVersion(){
+        var op = document.getElementById("product");
+        var ov = document.getElementById("version");
+
+        var sv= op.options[op.selectedIndex].value;
+
+        while(ov.options.length>1){
+          ov.options[1]=null;
+        }
+
+        switch (sv) {
+          case "윈도우":
+          for(var i=0; i<windowVersion.length; i++){
+            ov.options[ov.options.length]= new Option(windowVersion[i],windowVersion[i]);
+          }
+          break;
+
+          case "오피스":
+          for(var i=0; i<officeVersion.length; i++){
+            ov.options[ov.options.length]= new Option(officeVersion[i],officeVersion[i]);
+          }
+          break;
+
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <select id="product" onchange="setVersion()">
+      <option value="">제품을 선택하세요</option>
+      <option value="윈도우">윈도우</option>
+      <option value="오피스">오피스</option>
+    </select>
+
+    <select id="version">
+      <option value="">버전을 선택하세요</option>
+    </select>
+
+  </body>
+</html>

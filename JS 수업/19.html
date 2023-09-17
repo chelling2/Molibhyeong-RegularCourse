@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>합 구하기</title>
+    <script>
+
+        function sum(){
+          var a= document.getElementById("aa").value;
+          var b= document.getElementById("bb").value;
+          var d;
+
+          d=parseInt(a) + parseInt(b);
+          document.getElementById("hap").value=d;
+
+        }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="aa"> +
+    <input type="text" id="bb">
+    <input type="button" value="=" onclick="sum()">
+    <input type="text" id = "hap">
+
+  </body>
+</html>

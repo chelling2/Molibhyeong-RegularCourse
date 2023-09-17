@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>getElementsByTagName 메서드로 객체 찾기</title>
+    <script>
+        function makeFriends(){
+            var myFriends = window.prompt("친구가 몇 명인가요?","");
+
+            for(var i=0; i < parseInt(myFriends);i++){
+                var textBox = document.createElement("input");
+                var newLine = document.createElement("br");
+                textBox.type = "text";
+
+                document.body.appendChild(textBox);
+                document.body.appendChild(newLine);
+            }
+        }
+    </script>
+  </head>
+  <body onload ="makeFriends()">
+    <h2>내 친구 나열하기</h2>
+  </body>
+</html>

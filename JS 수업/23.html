@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .my-text-border {
+            border: 3px dotted cyan;
+            padding: 10px;
+            width: 760px;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 26pt;
+            color: blue;
+        }
+    </style>
+    <title>글자 타이핑</title>
+</head>
+<body>
+    <div class="my-text-border text"></div>
+
+    <script>
+        const text1 = "베스킨라빈스의 인기메뉴 3위는 민트초코입니다.";
+        const text = document.querySelector(".text");
+        let i = 0;
+
+        function typing() {
+            if (i < text1.length) {
+                let txt = text1.charAt(i);
+                text.innerHTML += txt;
+                i++;
+            } else if (i === text1.length) {
+                text.innerHTML = "";
+                i = 0;
+            }
+        }
+
+        const intervalId = setInterval(typing, 100);
+    </script>
+</body>
+</html>

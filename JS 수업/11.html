@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <title>setInterval 놀이</title>
+    <script language="javascript">
+
+      var Interval = setInterval(sayHello, 1000);
+      var count = 0;
+
+      function sayHello() {
+        alert("안녕하세요? 방갑네요");
+        count++;
+        if (count ==  5) {
+          clearInterval(Interval);
+        }
+
+      }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

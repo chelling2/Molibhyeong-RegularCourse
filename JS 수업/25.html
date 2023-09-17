@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>미리보기 텍스트</title>
+</head>
+<body align="center" bgcolor="ivory">
+
+  <br><br>
+    <!-- 입력 필드와 미리 보기 버튼 -->
+    <input type="text" id="content">
+    <input type="button" value="미리 보기" onclick="setText()">
+    <br>
+
+    <!-- 색상 선택 -->
+    색상:
+    <select id="color">
+        <option value="">원하는 색상을 선택하십시오.</option>
+        <option value="red">빨강</option>
+        <option value="blue">파랑</option>
+        <option value="green">초록</option>
+        <option value="cyan">청록</option>
+        <option value="white">하얀</option>
+        <option value="yellow">노랑</option>
+    </select>
+    <br>
+
+    <!-- 폰트 크기 선택 -->
+    크기:
+    <select id="fontSize">
+        <option value="">원하는 폰트 크기를 선택하십시오.</option>
+        <option value="3pt">3</option>
+        <option value="7pt">7</option>
+        <option value="10pt">10</option>
+        <option value="15pt">15</option>
+        <option value="24pt">24</option>
+        <option value="30pt">30</option>
+        <option value="50pt">50</option>
+    </select>
+    <br>
+
+    <!-- 텍스트 스타일 옵션 -->
+    <div>
+        <input type="checkbox" name="abc" value="취소선">취소선
+        <input type="checkbox" name="abc" value="크게">크게
+        <input type="checkbox" name="abc" value="작게">작게
+        <input type="checkbox" name="abc" value="두껍게">두껍게
+        <input type="checkbox" name="abc" value="기울임">기울임
+        <br>
+        <input type="checkbox" name="abc" value="위첨자">위첨자
+        <input type="checkbox" name="abc" value="아래첨자">아래첨자
+        <input type="checkbox" name="abc" value="소문자로">소문자로
+        <input type="checkbox" name="abc" value="대문자로">대문자로
+    </div>
+    <br>
+
+    <!-- 미리 보기 결과 표시 -->
+    <label id="result" class="res"></label>
+
+    <script>
+        // 필요한 요소들을 JavaScript로 가져옴
+        var content = document.getElementById("content");
+        var setDiv = document.getElementById("result");
+        var checkedArr = document.getElementsByName("abc");
+
+        // 텍스트 스타일을 설정하고 미리 보기 결과를 업데이트하는 함수
+        function setText() {
+            var res = content.value;
+            var colorType = document.getElementById("color");
+            var selectedColor = colorType.options[colorType.selectedIndex].value;
+
+            var fontSizeType = document.getElementById("fontSize");
+            var selectedFontSize = fontSizeType.options[fontSizeType.selectedIndex].value;
+
+            // 미리 보기 텍스트 업데이트
+            setDiv.innerHTML = content.value;
+
+            // 선택한 색상 적용
+            setDiv.style.color = selectedColor;
+
+            // 선택한 폰트 크기 적용
+            setDiv.style.fontSize = selectedFontSize;
+
+            // 선택한 스타일 옵션 적용
+            for (var i = 0; i < checkedArr.length; i++) {
+                if (checkedArr[i].checked) {
+                    switch (checkedArr[i].value) {
+                        case "취소선":
+                            res = "<s>" + res + "</s>";
+                            break;
+                        case "크게":
+                            res = "<big>" + res + "</big>";
+                            break;
+                        case "작게":
+                            res = "<small>" + res + "</small>";
+                            break;
+                        case "두껍게":
+                            res = "<strong>" + res + "</strong>";
+                            break;
+                        case "기울임":
+                            res = "<i>" + res + "</i>";
+                            break;
+                        case "위첨자":
+                            res = "<sup>" + res + "</sup>";
+                            break;
+                        case "아래첨자":
+                            res = "<sub>" + res + "</sub>";
+                            break;
+                        case "소문자로":
+                            res = res.toLowerCase();
+                            break;
+                        case "대문자로":
+                            res = res.toUpperCase();
+                            break;
+                    }
+                }
+            }
+            setDiv.innerHTML = res;
+        }
+    </script>
+</body>
+</html>
