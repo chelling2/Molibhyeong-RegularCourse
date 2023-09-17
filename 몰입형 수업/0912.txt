@@ -1,0 +1,520 @@
+HTML
+
+하이퍼 텍스트 : 웹페이지 이동할 수 있도록 만들어진 문장.
+
+<head>
+html 문서의 시작과 끝을 표시
+
+<HEAD> 태그는 HTML 문서에 대한 정보를 표시하는데 사용
+
+<TITLE> HTML문서의 제목을 표시하는 역할
+
+동적인 부분을 만들고 싶으면 자바스크립트 사용
+정적인 부분을 만든다면 Html 사용
+
+디자인적인 부분은 css 사용
+
+
+<META>
+HTML문서 자체에 대한 설명을 제공하기 위해 사용.
+사용형식
+<META http-equiv="메타 태그 항목 이름" content="항목 내용">
+<META name = "메타 태그 항목이름" content="항목 내용">
+
+일반적인 태그와 달리 닫는 태그가 없다. 
+
+페이지 검색엔진에 나타내지 않게 하기
+<META name="robots" content= "noindex,nofollow">
+
+검색 엔진들이 HTML 문서에 포하묀 검색 키워드를 이용하여 검색하므로, 검색엔진에 의해 잘 검색되도록 하기 위해 <META> 태그를 이용 
+
+ex) <META http-eqiv ="refresh" content="5; url = http://www.naver.com">    
+
+<body> 몸통
+-background=@@.jpg 를 통해 배경에 이미지 지정도 가능 
+
+<br>은 엔터를 의미 // 엔터 치려면 <br> 태그 이용 
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> 바디 태그 연습!  </title>
+  </head>
+  <body background="람보.jpg">
+<br>
+  </body>
+</html>
+
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> 바디 태그 연습!  </title>
+  </head>
+  <body link="blue" vlink="red" alink="darkgreen">
+<a href="http://www.naver.com"> 네이버로 이동합니다.</a>
+  </body>
+</html>
+
+하이퍼 링크 색상 조정 
+
+
+<p>태그로 둘러 싸이면 간단한 문단을 만듬 
+속성으로 align이 있음. 값은 right,center, left 등등
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> 문단을 나누는 <p> 태그</title>
+  </head>
+  <body>
+    <p>동해물과 백두산이 마르고 닳도록 </p>
+    <p align="right">하느님이 보우하사 우리나라 만세</p>
+    <p>무궁화 삼천리 화려강산</p>
+    <p align="center">대한사람 대한으로 길이 보전하세 </p>
+  </body>
+</html>
+
+
+<PRE> 태그를 입력하면 그대로 출력 
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> 하나의 문단 pre 태그 </title>
+  </head>
+  <body>
+    <pre>
+      동해물과 백두산이 마르고 닳도록
+      하느님이 보우하사 우리나라 만세
+      무궁화 삼천리 화려강산
+      대한사람 대한으로 길이 보전하세
+  </pre>
+  </body>
+</html>
+
+
+<HR>
+-구분선을 지정 
+
+  <hr width="100%" color="blue">
+
+
+&nbsp
+여러개의 빈칸이나 엔터키 등 모든 공백 문자를 단 하나의 빈칸으로 인식 
+따라서 여러 개의 공백을 인식하고자 할 때 사용 
+
+<blockquote> 자동 들여쓰기 
+
+
+본문 제목 표시 태그 
+<H>
+<h1>~<h6>
+
+<FONT> 글자 모양
+
+
+<MARQUEE>
+웹페이지에서 눈에 띄게 하고 싶거나 강조하고 싶은 부분을 움직이는 텍스트로 표시 
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MARQUEE 태그로 흘러가는 텍스트 만들기</title>
+  </head>
+  <body>
+  <h2 align="center">아래의 텍스트가 움직여요!</h2>
+  <p>
+    <marquee behavior="scroll">이 텍스트가 움직여요!</marquee>     애는 단방향으로 쭉가고 
+    <marquee behavior="alternate">이 텍스트가 움직여요!</marquee>   애는 벽 맞고 튕겨서 가고 
+    <marquee behavior="slide">이 텍스트가 움직여요!</marquee>    애는 한번만 가고 끝 
+    </p>
+  </body>
+</html>
+
+
+다양한 글자 관련 물리 태그들
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>다양한 글자 관련 물리 태그들</title>
+  </head>
+  <body>
+  <p><b>B태그는 글자를 굵게 </b>표현합니다.</p>
+  <p><i>I태그는 글자를 기울여서</i>표현합니다.</p>
+  <u>u태그는 글자에 밑줄을 표시합니다.</u>
+  <p>Sup태그는 글자를 <sup>위첨자</sup>로 표시합니다.</p>
+  <p>Sub태그는 글자를 <sub>아래첨자</sub>로 표시합니다.</p>
+  <tt> tt태그는 글자를 타자체로 표현합니다.</tt>
+  <p>BIG태그는 글자를 주변의 글자보다 <big>크게</big> 표현합니다.</p>
+  <p>BIG태그는 글자를 주변의 글자보다 <SMALL>작게</small> 표현합니다.</p>
+    <STRIKE>스트라이크 태그는 글자에 취소선을 표시합니다.<STRIKE>
+  </body>
+</html>
+
+
+목록 태그
+
+<OL> 숫자를 이용해 목록을 만들 때 사용.
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>목록태그</title>
+  </head>
+  <body>
+<ol type="l">
+  <li>META</li>
+  <li>TITLE</li>
+  <li>DIV</li>
+  <li>SCRIPT</li>
+</ol><br>
+<li>&LT; FONT&gt:태그의 특성이 아닌 것은?</li>
+<ol type="A" start="5">
+  <li>size</li>
+  <li>fontname</li>
+  <li>face</li>
+  <li>color</li>
+</ol><br>
+
+<li>다음 중 html 편집기가 아닌 것은?</li>
+<ol type="square">
+  <li>메모장</li>
+  <li>드림위버</li>
+  <li>나모 웹에디터</li>
+  <li>그림판</li>
+</ol>
+</ol>
+  </body>
+</html>
+
+
+<UL> 순서 없는 목록 사용할 때 
+
+<DL> 용어를 정리할 때 사용 
+
+<A> 문장이나 이미지등에 하이퍼 링크를 만들게 된다. 
+특성중 href
+
+
+<img> 이미지 태그에 이미지 연결 
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>이미지에 링크를 걸어봅시다.</title>
+  </head>
+  <body>
+<h2 align="center">이미지에 하이퍼링크 걸기 </h2>
+<p align="center">
+  <a href="http://www.naver.com">
+  <img src="람보.png"</a>
+  </p>
+  </body>
+</html>
+
+
+현재문서 특정위치로 이동하기 
+
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>하이퍼링크로 다른 위치로 이동하기</title>
+  </head>
+  <body vlink="blue">
+<h3>HTML 기초 용어 </h3>
+<dl>
+  <dt>목차
+    <dd>
+      <li><a href="#html">HTML</a>
+      <li><a href="#css">css</a>
+      <li><a href="#js">자바스크립트</a>
+    </dd>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+  <dt><a name="html">HTML</a>
+    <dd>HTML은 하이퍼 텍스트 마크업 랭기지의 약자로
+   매우 쉽고 빠르게 웹 문서를 만들 수 있는
+  마크업 언어입니다.
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+  <dt><a name="CSS">CSS</a>
+    <dd>css는 캐스캐딩 스타일 시트의 약자로
+      html 문서의 스타일을 정의하는 규약입니다.
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+      <dt><a name="js">자바스크립트</a>
+        <dd>자바스크립트는 html 문서에서 사용할 수 있는
+          프로그래밍 언어로 html 문서에 다양한 효과를 줄 때
+          사용합니다.
+          </dl>
+  </body>
+</html>
+
+
+
+
+
+메일보내기
+<html>
+    <head>
+        <title>하이퍼링크로 메일 보내기</title>
+    </head>
+    <body vlink="blue">
+        <H3>메일 보내주면 안잡아먹지</H3>
+        <a href="mailto:junghun_1999@naver.com?subject=안녕하세요"> 메일 보내기</a>
+    </body>
+</html>
+
+
+
+
+
+표 만들기
+
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>초간단 테이블</title>
+  </head>
+  <body>
+<h2 align="center">초간단 테이블 만들기</h2>
+<table width="400" height="250" border="1">
+  <tr>  <!-- 첫 번째 줄 시작 -->
+    <td>첫 번째 칸</td>
+    <td>두 번째 칸</td>
+
+  </tr>
+  <tr> <!-- 두 번째 줄 시작 -->
+    <td>첫 번째 칸</td>
+    <td>두 번째 칸</td>
+  </tr>
+</table>
+  </body>
+</html>
+
+
+TD의 속성  
+Colspan 칸을 합침 
+rowspan  줄을 합침 
+
+
+
+표 만들어보기 예제
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>수입 지출!</title>
+  </head>
+  <body>
+  <table border="1" bordercolor="black" width ="500" height="400" align = "center" >
+      <tr bgcolor="blue" align ="center">
+  <td colspan = "3" span style="color:white">오늘의 수입/지출</td>
+      </tr>
+      <tr align = "center" bgcolor="skybule">
+  	<td>내용</td>
+  	<td>수입</td>
+  	<td>지출</td>
+      </tr>
+      <tr>
+  	<td>월급!</td>
+  	<td>1,000,000</td>
+  	<td></td>
+      </tr>
+      <tr>
+  	<td>점심값</td>
+  	<td></td>
+  	<td>5,000</td>
+      </tr>
+      <tr>
+  	<td>부모님선물</td>
+  	<td></td>
+  	<td>30,000</td>
+      </tr>
+      <tr>
+  	<td rowspan="3" align = "center" bgcolor="skyblue">총계</td>
+  	<td>수입</td>
+  	<td>지출</td>
+      </tr>
+      <tr>
+  	<td>1,000,000</td>
+  	<td>35,000</td>
+      </tr>
+      <tr>
+  	<td>남은돈</td>
+  	<td>965,000</td>
+      </tr>
+  </table>
+  </body>
+</html>
+
+
+프레임
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <title>초간단 프레임 셋</title>
+  </head>
+  <frameset rows="30%,70%">
+    <frame name="top" src="01_01.html"></frame>
+    <frame name="body" src="01_02.html"></frame>
+    </frameset>
+</html>
+
+
+
+인라인 프레임 
+인라인 프레임을 이용하면 HTML 문서의 일부 영역을 프레임처럼 사용할 수 있습니다. 
+
+<<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <title>인라인 프레임 사용하기</title>
+  </head>
+<body bgcolor="#FFA500">
+  <h2>인라인 프레임 사용 예제</h2>
+  <p>
+    인라인 프레임을 이용하면 HTML 문서의 일부 영역을 프레임처럼 사용할 수 있습니다.
+  </p>
+  <iframe name="iframe1" src="람보.jpg width="300" height="300"></iframe>
+</body>
+</html>
+
+
+폼 양식 태그
+<form>
+
+특성
+action : 폼 양식 태그의 값들이 전송될 url 지정
+method : post,get이 있고
+target : 액션 특성에 지정된 url이 보여질 프레임 이름을 지정 
+
+post 방식 : 검색했을 때 url에 안보임     
+get 방식 : 검색했을 때 url에 내가 친 글자 나오는거 
+
+아이디, 패스워드는 무조건 폼태그 쓸 때 post 방식으로 하게 되고,
+검색 같은 search 할 땐 get 방식을 한다는 것 
+
+<INPUT> 한줄 입력 
+타입에 값들을 받아 사용 
+
+<TEXTAREA>
+여러 줄 텍스트 입력 받음 
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+
+    <title></title>
+  </head>
+  <body>
+
+
+<input type="text" name="my_id" size="20" value="서정훈" maxlength="5">
+<input type="password" name="my_pwd" size="20" value="123" maxlength="3">
+<textarea name="name" rows="5" cols="20"></textarea>
+  </body>
+</html>
+
+
+
+
+
+라디오 버튼 
+input 태그에 타입을 radio로    그룹중에 하나만 선택가능하다는거 
+가장 중요한 부분은 안에 네임들은 같은 이름으로 사용해야 체크 하나만 받을 수 있다는거 
+실제로 전송 되는 데이터는 value 값이고, 보여지는건 안에 있는 텍스트
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+
+<h1> 1. 여러분이 사용하는 cpu는?</h1>
+<input type="radio" name="cpu" value="코어2듀오" checked>코어2듀오<br>
+<input type="radio" name="cpu" value="코어듀오" >코어듀오<br>
+<input type="radio" name="cpu" value="펜티엄4" >펜티엄 4<br>
+<input type="radio" name="cpu" value="펜티엄3" >펜티엄 3<br>
+
+<h2>메모리는 얼마나 사용하시나요?</h2>
+<input type="radio" name="memory" value="2048">2048<br>
+<input type="radio" name="memory" value="1024" checked>1024<br>
+<input type="radio" name="memory" value="512">512<br>
+<input type="radio" name="memory" value="256">256<br>
+  </body>
+</html>
+
+
+
+
+체크박스
+여러개 선택이 가능하다는 거
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+<h2>여러분이 가지고 있는 부품을 모두 고르세요</h2>
+<input type="checkbox" name="computer" value="코어2듀오" checked>코어2듀오<br>
+<input type="checkbox" name="computer" value="코어" checked>코<br>
+<input type="checkbox" name="computer" value="코" >코어2<br>
+<input type="checkbox" name="computer" value="코오">오<br>
+<input type="checkbox" name="computer" value="코h" >2듀오<br>
+<input type="checkbox" name="computer" value="2듀오" >코오<br>
+<input type="checkbox" name="computer" value="오" checked>듀오<br>
+  </body>
+</html>
+
+
+
+
+
+<SELECT>문
+여러가지 
+
+전송버튼, 입력취소버튼
+type는 submit
+        reset
+
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+<select name="items1">
+  <option value="html">html</option>
+  <option value="자바스크립트">자바스크립트</option>
+  <option value="css">css</option>
+</select>
+
+<br><br><br><br><br>
+
+<select name="items2">
+  <option value="html">html</option>
+  <option value="자바스크립트">자바스크립트</option>
+  <option value="css">css</option>
+</select>
+
+<input type="submit" value="전송하기">
+<input type="reset" value="다시입력">
+  </body>
+</html>
+
+
+
+
+
