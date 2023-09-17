@@ -1,3 +1,3 @@
 # Molibhyeong-RegularCourse
-~ ing
+### ~ ing
 Study during Semester
